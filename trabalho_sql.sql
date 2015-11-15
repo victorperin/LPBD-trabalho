@@ -32,9 +32,9 @@ CREATE TABLE IF NOT EXISTS `AlbunsArtistas` (
   `AlbumId` int(10) unsigned NOT NULL,
   `Principal` enum('true','false') NOT NULL,
   PRIMARY KEY (`ArtistaId`,`AlbumId`),
-  KEY `album-AlbunsArtistas` (`AlbumId`),
-  CONSTRAINT `album-AlbunsArtistas` FOREIGN KEY (`AlbumId`) REFERENCES `Albuns` (`Id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  CONSTRAINT `artista-AlbunsArtistas` FOREIGN KEY (`ArtistaId`) REFERENCES `Artistas` (`Id`) ON DELETE CASCADE ON UPDATE CASCADE
+  KEY `album_AlbunsArtistas` (`AlbumId`),
+  CONSTRAINT `album_AlbunsArtistas` FOREIGN KEY (`AlbumId`) REFERENCES `Albuns` (`Id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `artista_AlbunsArtistas` FOREIGN KEY (`ArtistaId`) REFERENCES `Artistas` (`Id`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Relação MANY TO MANY de Albuns e Artistas';
 
 -- Exportação de dados foi desmarcado.
@@ -72,11 +72,11 @@ CREATE TABLE IF NOT EXISTS `Musicas` (
   `AlbumId` int(10) unsigned NOT NULL,
   PRIMARY KEY (`Id`),
   KEY `buscaPorNome` (`Nome`),
-  KEY `artista-musicas` (`ArtistaId`),
-  KEY `genero-Musicas` (`GeneroId`),
   KEY `album-Musicas` (`AlbumId`),
-  CONSTRAINT `artista-musicas` FOREIGN KEY (`ArtistaId`) REFERENCES `Artistas` (`Id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  CONSTRAINT `genero-Musicas` FOREIGN KEY (`GeneroId`) REFERENCES `Genero` (`Id`) ON DELETE CASCADE ON UPDATE CASCADE
+  KEY `artista_musicas` (`ArtistaId`),
+  KEY `genero_Musicas` (`GeneroId`),
+  CONSTRAINT `artista_musicas` FOREIGN KEY (`ArtistaId`) REFERENCES `Artistas` (`Id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `genero_Musicas` FOREIGN KEY (`GeneroId`) REFERENCES `Genero` (`Id`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- Exportação de dados foi desmarcado.
