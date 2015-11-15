@@ -37,7 +37,7 @@ CREATE TABLE IF NOT EXISTS Genero (
 
 CREATE TABLE IF NOT EXISTS Musicas (
   Id int(10) unsigned NOT NULL AUTO_INCREMENT,
-  Nome varchar(100) NOT NULL COMMENT 'Maior música ja feita: "Several Species Os Small Furry Animals Gathered Together In A Cave And Grooving With A Pict."',
+  Nome varchar(100) NOT NULL,
   GeneroId int(10) unsigned NOT NULL,
   ArtistaId int(10) unsigned NOT NULL,
   AlbumId int(10) unsigned NOT NULL,
@@ -51,8 +51,9 @@ CREATE TABLE IF NOT EXISTS Musicas (
 );
 
 CREATE TABLE MusicasComArtistaEAlbum (
-	NomeMusica VARCHAR(100) NOT NULL COMMENT 'Maior música ja feita: "Several Species Os Small Furry Animals Gathered Together In A Cave And Grooving With A Pict."' COLLATE 'latin1_swedish_ci',
-	NomeArtista VARCHAR(50) NOT NULL COLLATE 'latin1_swedish_ci',
+
+	NomeMusica VARCHAR(100) NOT NULL,
+	NomeArtista VARCHAR(50) NOT NULL,
 	NomeAlbum INT(10) UNSIGNED NOT NULL,
 	DataLancamento DATE NOT NULL
 );
