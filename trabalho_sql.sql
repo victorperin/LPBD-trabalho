@@ -13,7 +13,7 @@ CREATE TABLE IF NOT EXISTS Genero (
   Id int(10) unsigned NOT NULL AUTO_INCREMENT,
   Nome varchar(50) NOT NULL,
   PRIMARY KEY (Id),
-  KEY Nome (Nome)
+  UNIQUE INDEX Nome (Nome)
 );
 
 -- Lista de países.
@@ -57,7 +57,8 @@ CREATE TABLE IF NOT EXISTS Musicas (
   KEY genero_Musicas (GeneroId),
   KEY album_Musicas (AlbumId),
   CONSTRAINT artista_musicas FOREIGN KEY (ArtistaId) REFERENCES Artistas (Id) ON DELETE CASCADE ON UPDATE CASCADE,
-  CONSTRAINT genero_Musicas FOREIGN KEY (GeneroId) REFERENCES Genero (Id) ON DELETE CASCADE ON UPDATE CASCADE
+  CONSTRAINT genero_Musicas FOREIGN KEY (GeneroId) REFERENCES Genero (Id) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT album_Musicas FOREIGN KEY (AlbumId) REFERENCES Albuns (Id) ON DELETE CASCADE ON UPDATE CASCADE
 );
 
 CREATE TABLE MusicasComArtistaEAlbum (
