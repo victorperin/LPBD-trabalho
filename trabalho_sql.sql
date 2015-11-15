@@ -72,9 +72,9 @@ CREATE TABLE IF NOT EXISTS `Musicas` (
   `AlbumId` int(10) unsigned NOT NULL,
   PRIMARY KEY (`Id`),
   KEY `buscaPorNome` (`Nome`),
-  KEY `album-Musicas` (`AlbumId`),
   KEY `artista_musicas` (`ArtistaId`),
   KEY `genero_Musicas` (`GeneroId`),
+  KEY `album_Musicas` (`AlbumId`),
   CONSTRAINT `artista_musicas` FOREIGN KEY (`ArtistaId`) REFERENCES `Artistas` (`Id`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `genero_Musicas` FOREIGN KEY (`GeneroId`) REFERENCES `Genero` (`Id`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
