@@ -3,14 +3,14 @@ USE trabalho_lpbd;
 
 
 CREATE TABLE IF NOT EXISTS Albuns (
-  Id int(10) unsigned NOT NULL AUTO_INCREMENT,
+  Id SERIAL NOT NULL,
   Nome varchar(50) NOT NULL,
   AnoLancamento int(10) NOT NULL,
   PRIMARY KEY (Id)
 );
 
 CREATE TABLE IF NOT EXISTS Genero (
-  Id int(10) unsigned NOT NULL AUTO_INCREMENT,
+  Id SERIAL NOT NULL,
   Nome varchar(50) NOT NULL,
   PRIMARY KEY (Id),
   UNIQUE INDEX Nome (Nome)
@@ -18,14 +18,14 @@ CREATE TABLE IF NOT EXISTS Genero (
 
 -- Lista de países.
 CREATE TABLE IF NOT EXISTS Paises (
-  Id int(10) unsigned NOT NULL AUTO_INCREMENT,
+  Id SERIAL NOT NULL,
   Nome varchar(50) NOT NULL,
   PRIMARY KEY (Id),
   KEY SelectByNome (Nome)
 );
 
 CREATE TABLE IF NOT EXISTS Artistas (
-  Id int(10) unsigned NOT NULL AUTO_INCREMENT,
+  Id SERIAL NOT NULL,
   Nome varchar(50) NOT NULL,
   GeneroId int(10) unsigned NOT NULL,
   CountryId int(10) unsigned NOT NULL,
@@ -46,7 +46,7 @@ CREATE TABLE IF NOT EXISTS AlbunsArtistas (
 );
 
 CREATE TABLE IF NOT EXISTS Musicas (
-  Id int(10) unsigned NOT NULL AUTO_INCREMENT,
+  Id SERIAL NOT NULL,
   Nome varchar(100) NOT NULL,
   GeneroId int(10) unsigned NOT NULL,
   ArtistaId int(10) unsigned NOT NULL,
