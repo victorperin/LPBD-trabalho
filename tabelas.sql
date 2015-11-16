@@ -19,8 +19,7 @@ CREATE UNIQUE INDEX Nome ON Genero (Nome);
 CREATE TABLE IF NOT EXISTS Paises (
   Id SERIAL NOT NULL,
   Nome varchar(50) NOT NULL,
-  PRIMARY KEY (Id),
-  KEY SelectByNome (Nome)
+  PRIMARY KEY (Id)
 );
 
 CREATE TABLE IF NOT EXISTS Artistas (
@@ -39,7 +38,6 @@ CREATE TABLE IF NOT EXISTS AlbunsArtistas (
   AlbumId int NOT NULL,
   Principal enum('true','false') NOT NULL,
   PRIMARY KEY (ArtistaId,AlbumId),
-  KEY album_AlbunsArtistas (AlbumId),
   CONSTRAINT album_AlbunsArtistas FOREIGN KEY (AlbumId) REFERENCES Albuns (Id) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT artista_AlbunsArtistas FOREIGN KEY (ArtistaId) REFERENCES Artistas (Id) ON DELETE CASCADE ON UPDATE CASCADE
 );
@@ -51,10 +49,6 @@ CREATE TABLE IF NOT EXISTS Musicas (
   ArtistaId int NOT NULL,
   AlbumId int NOT NULL,
   PRIMARY KEY (Id),
-  KEY buscaPorNome (Nome),
-  KEY artista_musicas (ArtistaId),
-  KEY genero_Musicas (GeneroId),
-  KEY album_Musicas (AlbumId),
   CONSTRAINT artista_musicas FOREIGN KEY (ArtistaId) REFERENCES Artistas (Id) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT genero_Musicas FOREIGN KEY (GeneroId) REFERENCES Genero (Id) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT album_Musicas FOREIGN KEY (AlbumId) REFERENCES Albuns (Id) ON DELETE CASCADE ON UPDATE CASCADE
