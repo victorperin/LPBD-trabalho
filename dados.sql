@@ -1,3 +1,10 @@
+INSERT INTO Paises (Id, Nome) VALUES
+	(1, 'Inglaterra'),
+	(2, 'Estados Unidos'),
+	(3, 'Brasil'),
+	(4, 'Canada'),
+	(5, 'Russia');
+
 INSERT INTO Albuns (Id, Nome, AnoLancamento) VALUES
 	(1, 'From Death To Destiny', 2013),
 	(2, 'Common Courtesy', 2013),
@@ -45,10 +52,3 @@ INSERT INTO Musicas (Id, Nome, GeneroId, ArtistaId, AlbumId) VALUES
 	(5, 'Killing You', 1, 1, 1),
 	(6, 'Poison', 1, 1, 1),
 	(7, 'Welcome', 1, 1, 3);
-
-INSERT INTO Paises (Id, Nome) VALUES
-	(1, 'Inglaterra'),
-	(2, 'Estados Unidos'),
-	(3, 'Brasil'),
-	(4, 'Canada'),
-	(5, 'Russia');
