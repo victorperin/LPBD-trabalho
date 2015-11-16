@@ -6,7 +6,7 @@ FROM Albuns
   JOIN AlbunsArtistas ON AlbunsArtistas.AlbumId = Albuns.Id
   JOIN Artistas ON Artistas.Id = AlbunsArtistas.ArtistaId
 WHERE
-  Artistas.Nome like "%Asking%";
+  Artistas.Nome like '%Asking%';
 
 SELECT
   NomeMusica,
