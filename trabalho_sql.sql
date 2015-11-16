@@ -1,7 +1,6 @@
 CREATE DATABASE IF NOT EXISTS trabalho_lpbd;
 USE trabalho_lpbd;
 
-
 CREATE TABLE IF NOT EXISTS Albuns (
   Id SERIAL NOT NULL,
   Nome varchar(50) NOT NULL,
@@ -27,8 +26,8 @@ CREATE TABLE IF NOT EXISTS Paises (
 CREATE TABLE IF NOT EXISTS Artistas (
   Id SERIAL NOT NULL,
   Nome varchar(50) NOT NULL,
-  GeneroId int(10) unsigned NOT NULL,
-  CountryId int(10) unsigned NOT NULL,
+  GeneroId int NOT NULL,
+  CountryId int NOT NULL,
   PRIMARY KEY (Id),
   CONSTRAINT genero_Artistas FOREIGN KEY (GeneroId) REFERENCES Genero (Id) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT contry_Artistas FOREIGN KEY (CountryId) REFERENCES Paises (Id) ON DELETE CASCADE ON UPDATE CASCADE
@@ -36,8 +35,8 @@ CREATE TABLE IF NOT EXISTS Artistas (
 
 -- Relação MANY TO MANY de Albuns e Artistas
 CREATE TABLE IF NOT EXISTS AlbunsArtistas (
-  ArtistaId int(10) unsigned NOT NULL,
-  AlbumId int(10) unsigned NOT NULL,
+  ArtistaId int NOT NULL,
+  AlbumId int NOT NULL,
   Principal enum('true','false') NOT NULL,
   PRIMARY KEY (ArtistaId,AlbumId),
   KEY album_AlbunsArtistas (AlbumId),
@@ -48,9 +47,9 @@ CREATE TABLE IF NOT EXISTS AlbunsArtistas (
 CREATE TABLE IF NOT EXISTS Musicas (
   Id SERIAL NOT NULL,
   Nome varchar(100) NOT NULL,
-  GeneroId int(10) unsigned NOT NULL,
-  ArtistaId int(10) unsigned NOT NULL,
-  AlbumId int(10) unsigned NOT NULL,
+  GeneroId int NOT NULL,
+  ArtistaId int NOT NULL,
+  AlbumId int NOT NULL,
   PRIMARY KEY (Id),
   KEY buscaPorNome (Nome),
   KEY artista_musicas (ArtistaId),
