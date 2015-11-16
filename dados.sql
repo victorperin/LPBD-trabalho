@@ -9,13 +9,13 @@ INSERT INTO Albuns (Id, Nome, AnoLancamento) VALUES
 	(8, 'With Ears To See And Eyes To Hear', 2010);
 
 INSERT INTO Genero (Id, Nome) VALUES
-	(9, 'Country Rock'),
-	(11, 'Eletronica'),
-	(4, 'Emocore'),
 	(1, 'Metalcore'),
-	(3, 'Pop Punk'),
 	(2, 'Post-Hardcore'),
-	(10, 'Rock');
+	(3, 'Pop Punk'),
+	(4, 'Emocore'),
+	(5, 'Country Rock'),
+	(6, 'Rock'),
+	(7, 'Eletronica');
 
 INSERT INTO Artistas (Id, Nome, GeneroId, CountryId) VALUES
 	(1, 'Asking Alexandria', 1, 1),
@@ -39,16 +39,16 @@ INSERT INTO AlbunsArtistas (ArtistaId, AlbumId, Principal) VALUES
 
 INSERT INTO Musicas (Id, Nome, GeneroId, ArtistaId, AlbumId) VALUES
 	(1, 'Gold', 2, 3, 5),
-	(3, 'Go Go Go', 2, 3, 5),
-	(6, 'Fly', 2, 3, 5),
-	(10, 'The Strays', 2, 3, 5),
-	(11, 'Killing You', 1, 1, 1),
-	(13, 'Poison', 1, 1, 1),
-	(14, 'Welcome', 1, 1, 3);
+	(2, 'Go Go Go', 2, 3, 5),
+	(3, 'Fly', 2, 3, 5),
+	(4, 'The Strays', 2, 3, 5),
+	(5, 'Killing You', 1, 1, 1),
+	(6, 'Poison', 1, 1, 1),
+	(7, 'Welcome', 1, 1, 3);
 
 INSERT INTO Paises (Id, Nome) VALUES
+	(1, 'Inglaterra'),
+	(2, 'Estados Unidos'),
 	(3, 'Brasil'),
 	(4, 'Canada'),
-	(2, 'Estados Unidos'),
-	(1, 'Inglaterra'),
 	(5, 'Russia');
