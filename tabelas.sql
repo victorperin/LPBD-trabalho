@@ -66,3 +66,12 @@ CREATE OR REPLACE VIEW MusicasComArtistaEAlbum AS
     join Albuns on Musicas.AlbumId = Albuns.Id
     join AlbunsArtistas on AlbunsArtistas.AlbumId = Albuns.Id
     join Artistas on AlbunsArtistas.ArtistaId = Artistas.Id;
+
+
+CREATE OR REPLACE FUNCTION bandaEMusica (
+  banda varchar(50), musica varchar(100)
+) RETURNS varchar(150) AS $$
+  BEGIN
+    RETURN CONCAT(banda, ' - ',musica);
+  END;
+$$ LANGUAGE plpgsql;
