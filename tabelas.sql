@@ -55,7 +55,7 @@ CREATE TABLE IF NOT EXISTS Musicas (
 );
 
 
-CREATE SQL SECURITY DEFINER VIEW MusicasComArtistaEAlbum AS
+CREATE OR REPLACE VIEW MusicasComArtistaEAlbum AS
   SELECT
     Musicas.Nome AS NomeMusica,
     Artistas.Nome AS NomeArtista,
