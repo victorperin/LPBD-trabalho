@@ -15,9 +15,10 @@ FROM MusicasComArtistaEAlbum
 WHERE
   NomeArtista = "Sleeping With Sirens";
 
-SELECT
-  NomeArtista
-  NomeAlbum,
-  COUNT(NomeMusica) AS QuantidadeDeMusicas
-FROM MusicasComArtistaEAlbum
-GROUP BY NomeAlbum;
+  SELECT
+    NomeArtista,
+    NomeAlbum,
+    COUNT(NomeMusica) AS QuantidadeDeMusicas
+  FROM MusicasComArtistaEAlbum
+  GROUP BY  NomeArtista, NomeAlbum
+  ORDER BY QuantidadeDeMusicas DESC;
