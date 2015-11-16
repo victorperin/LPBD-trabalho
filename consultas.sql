@@ -4,7 +4,7 @@ SELECT
   Albuns.AnoLancamento
 FROM Albuns
   JOIN AlbunsArtistas ON AlbunsArtistas.AlbumId = Albuns.Id
-  JOIN Artistas ON Artistas.Id = AlbunsArtistas.Artista.Id
+  JOIN Artistas ON Artistas.Id = AlbunsArtistas.ArtistaId
 WHERE
   Artistas.Nome like "%Asking%";
 
