@@ -4,7 +4,7 @@ USE trabalho_lpbd;
 CREATE TABLE IF NOT EXISTS Albuns (
   Id SERIAL NOT NULL,
   Nome varchar(50) NOT NULL,
-  AnoLancamento int(10) NOT NULL,
+  AnoLancamento int NOT NULL,
   PRIMARY KEY (Id)
 );
 
