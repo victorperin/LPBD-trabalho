@@ -1,4 +1,4 @@
-CREATE DATABASE IF NOT EXISTS trabalho_lpbd;
+CREATE DATABASE trabalho_lpbd;
 USE trabalho_lpbd;
 
 CREATE TABLE IF NOT EXISTS Albuns (
