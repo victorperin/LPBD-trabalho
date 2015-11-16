@@ -7,13 +7,14 @@ CREATE TABLE IF NOT EXISTS Albuns (
   AnoLancamento int NOT NULL,
   PRIMARY KEY (Id)
 );
+CREATE UNIQUE INDEX Nome_Albuns ON Albuns (Nome);
 
 CREATE TABLE IF NOT EXISTS Genero (
   Id SERIAL NOT NULL,
   Nome varchar(50) NOT NULL,
   PRIMARY KEY (Id)
 );
-CREATE UNIQUE INDEX Nome ON Genero (Nome);
+CREATE UNIQUE INDEX Nome_Genero ON Genero (Nome);
 
 -- Lista de países.
 CREATE TABLE IF NOT EXISTS Paises (
@@ -21,6 +22,7 @@ CREATE TABLE IF NOT EXISTS Paises (
   Nome varchar(50) NOT NULL,
   PRIMARY KEY (Id)
 );
+CREATE UNIQUE INDEX Nome_Paises ON Paises (Nome);
 
 CREATE TABLE IF NOT EXISTS Artistas (
   Id SERIAL NOT NULL,
@@ -31,6 +33,7 @@ CREATE TABLE IF NOT EXISTS Artistas (
   CONSTRAINT genero_Artistas FOREIGN KEY (GeneroId) REFERENCES Genero (Id) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT contry_Artistas FOREIGN KEY (CountryId) REFERENCES Paises (Id) ON DELETE CASCADE ON UPDATE CASCADE
 );
+CREATE UNIQUE INDEX Nome_Artistas ON Artistas (Nome);
 
 -- Relação MANY TO MANY de Albuns e Artistas
 CREATE TABLE IF NOT EXISTS AlbunsArtistas (
@@ -53,6 +56,7 @@ CREATE TABLE IF NOT EXISTS Musicas (
   CONSTRAINT genero_Musicas FOREIGN KEY (GeneroId) REFERENCES Genero (Id) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT album_Musicas FOREIGN KEY (AlbumId) REFERENCES Albuns (Id) ON DELETE CASCADE ON UPDATE CASCADE
 );
+CREATE UNIQUE INDEX Nome_Musicas ON Musicas (Nome);
 
 
 CREATE OR REPLACE VIEW MusicasComArtistaEAlbum AS
