@@ -9,11 +9,10 @@ WHERE
   Artistas.Nome like '%Asking%';
 
 SELECT
-  NomeMusica,
-  NomeArtista
+  bandaEMusica(NomeMusica,NomeArtista)
 FROM MusicasComArtistaEAlbum
 WHERE
-  NomeArtista = "Sleeping With Sirens";
+  NomeArtista = 'Sleeping With Sirens';
 
   SELECT
     NomeArtista,
