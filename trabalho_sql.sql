@@ -11,9 +11,9 @@ CREATE TABLE IF NOT EXISTS Albuns (
 CREATE TABLE IF NOT EXISTS Genero (
   Id SERIAL NOT NULL,
   Nome varchar(50) NOT NULL,
-  PRIMARY KEY (Id),
-  UNIQUE INDEX Nome (Nome)
+  PRIMARY KEY (Id)
 );
+CREATE UNIQUE INDEX Nome ON Genero (Nome);
 
 -- Lista de países.
 CREATE TABLE IF NOT EXISTS Paises (
