@@ -28,14 +28,14 @@ INSERT INTO Artistas (Id, Nome, GeneroId, CountryId) VALUES
 	(9, 'Fresno', 4, 3);
 
 INSERT INTO AlbunsArtistas (ArtistaId, AlbumId, Principal) VALUES
-	(1, 1, 'true'),
-	(1, 3, 'true'),
-	(1, 4, 'true'),
-	(3, 5, 'true'),
-	(3, 6, 'true'),
-	(3, 7, 'true'),
-	(3, 8, 'true'),
-	(8, 2, 'true');
+	(1, 1, true),
+	(1, 3, true),
+	(1, 4, true),
+	(3, 5, true),
+	(3, 6, true),
+	(3, 7, true),
+	(3, 8, true),
+	(8, 2, true);
 
 INSERT INTO Musicas (Id, Nome, GeneroId, ArtistaId, AlbumId) VALUES
 	(1, 'Gold', 2, 3, 5),
