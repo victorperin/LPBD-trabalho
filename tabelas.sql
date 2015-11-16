@@ -36,7 +36,7 @@ CREATE TABLE IF NOT EXISTS Artistas (
 CREATE TABLE IF NOT EXISTS AlbunsArtistas (
   ArtistaId int NOT NULL,
   AlbumId int NOT NULL,
-  Principal enum('true','false') NOT NULL,
+  Principal BOOLEAN NOT NULL,
   PRIMARY KEY (ArtistaId,AlbumId),
   CONSTRAINT album_AlbunsArtistas FOREIGN KEY (AlbumId) REFERENCES Albuns (Id) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT artista_AlbunsArtistas FOREIGN KEY (ArtistaId) REFERENCES Artistas (Id) ON DELETE CASCADE ON UPDATE CASCADE
