@@ -24,7 +24,7 @@
 
 11. Para separação entre parágrafos pode-se usar a entrada da primeira linha a partir de 1,2 cm da margem esquerda ou o acréscimo de uma linha entre parágrafos, sem entrada na primeira linha.
 
-###Prática - Banco de Dados Qualquer - Tema Livre
+### Prática - Banco de Dados Qualquer - Tema Livre
 
 - [x] Script de criação do banco e no mínimo 5 tabelas (Aplicar condições de restrição conforme material Aula 3).
 
@@ -38,7 +38,7 @@
 
 - [x] Usar, obrigatoriamente, PostgreSQL
 
-###Instruções sobre a entrega:
+### Instruções sobre a entrega:
 
 Data Entrega: 16/11 até as 23:59h.
 
@@ -56,17 +56,17 @@ No corpo do email anexar:
 
 O trabalho pode ser entregue por um grupo, de no máximo, dois alunos, sendo que os dois alunos devem obrigatoriamente ser alunos do mesmo professor da aula de Laboratório de LPBD.
 
-###Divisão dos alunos entre os professores das aulas de Laboratório de LPBD:
+### Divisão dos alunos entre os professores das aulas de Laboratório de LPBD:
 
-###Professor Adriano:
+### Professor Adriano:
 
 Alunos de Ciência da Computação cujos nomes estejam, em ordem alfabética, entre LUIZ CARLOS DE F NOVAES NETO e VICTOR DE PAULA MONTOYA, incluindo os dois alunos citados neste parágrafo.
 
-###Professor Paulo:
+### Professor Paulo:
 
 Os demais alunos
 
-###Observações:
+### Observações:
 
 Trabalhos entregues fora dos padrões descritos acima, não serão aceitos, ou seja, terão Nota zero.
 
