@@ -26,17 +26,17 @@
 
 ###Prática - Banco de Dados Qualquer - Tema Livre
 
-- [ ] Script de criação do banco e no mínimo 5 tabelas (Aplicar condições de restrição conforme material Aula 3).
+- [x] Script de criação do banco e no mínimo 5 tabelas (Aplicar condições de restrição conforme material Aula 3).
 
-- [ ] Inserção de Dados nas Tabelas (mínimo 5 em cada tabela).
+- [x] Inserção de Dados nas Tabelas (mínimo 5 em cada tabela).
 
-- [ ] Criar 1 visão de dados.
+- [x] Criar 1 visão de dados.
 
-- [ ] Criar 1 function, procedure ou trigger.
+- [x] Criar 1 function, procedure ou trigger.
 
-- [ ] Criar 3 consultas quaisquer.
+- [x] Criar 3 consultas quaisquer.
 
-- [ ] Usar, obrigatoriamente, PostgreSQL
+- [x] Usar, obrigatoriamente, PostgreSQL
 
 ###Instruções sobre a entrega:
 
