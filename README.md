@@ -1,6 +1,6 @@
-#LPBD 2015 - Trabalho em 2 partes (teoria e prática)
+# LPBD 2015 - Trabalho em 2 partes (teoria e prática)
 
-###Teoria – Mínimo 15 páginas / Máximo 20 páginas - 01 capítulo para cada item abaixo:
+### Teoria – Mínimo 15 páginas / Máximo 20 páginas - 01 capítulo para cada item abaixo:
 
 1. SQL – Extensões procedurais: function, procedure, trigger
 
@@ -16,29 +16,27 @@
 
 7. Capítulo contendo explicação sobre a parte Prática: porque escolheu o tema do banco de dados , como criou o banco, e uma breve descrição do mesmo, incluindo descrições das funcionalidades da view, da função e das 3 consultas
 
-Incluir bibliografia consultada (Incluir, obrigatoriamente, dois livros)
+8. Incluir bibliografia consultada (Incluir, obrigatoriamente, dois livros)
 
-Utilizar fonte tamanho 12 para o texto e um tamanho menor e uniforme para citações de mais de três linhas, notas de rodapé, legendas das ilustrações e de tabelas.
+9. Utilizar fonte tamanho 12 para o texto e um tamanho menor e uniforme para citações de mais de três linhas, notas de rodapé, legendas das ilustrações e de tabelas.
 
-Utilizar fonte tamanho 14 para títulos de seção e para os seguintes elementos da capa: nomes dos alunos, instituição, local e data. Para os títulos na capa recomenda-se a fonte 16.
+10. Utilizar fonte tamanho 14 para títulos de seção e para os seguintes elementos da capa: nomes dos alunos, instituição, local e data. Para os títulos na capa recomenda-se a fonte 16.
 
-Para separação entre parágrafos pode-se usar a entrada da primeira linha a partir de 1,2 cm da margem esquerda ou o acréscimo de uma linha entre parágrafos, sem entrada na primeira linha.
+11. Para separação entre parágrafos pode-se usar a entrada da primeira linha a partir de 1,2 cm da margem esquerda ou o acréscimo de uma linha entre parágrafos, sem entrada na primeira linha.
 
 ###Prática - Banco de Dados Qualquer - Tema Livre
 
-1-Script de criação do banco e no mínimo 5 tabelas
+- [ ] Script de criação do banco e no mínimo 5 tabelas (Aplicar condições de restrição conforme material Aula 3).
 
-(Aplicar condições de restrição conforme material Aula 3).
+- [ ] Inserção de Dados nas Tabelas (mínimo 5 em cada tabela).
 
-2-Inserção de Dados nas Tabelas (mínimo 5 em cada tabela).
+- [ ] Criar 1 visão de dados.
 
-3-Criar 1 visão de dados.
+- [ ] Criar 1 function, procedure ou trigger.
 
-4-Criar 1 function, procedure ou trigger.
+- [ ] Criar 3 consultas quaisquer.
 
-5- Criar 3 consultas quaisquer.
-
-Usar, obrigatoriamente, PostgreSQL
+- [ ] Usar, obrigatoriamente, PostgreSQL
 
 ###Instruções sobre a entrega:
 
@@ -72,4 +70,4 @@ Os demais alunos
 
 Trabalhos entregues fora dos padrões descritos acima, não serão aceitos, ou seja, terão Nota zero.
 
-. 
+.
