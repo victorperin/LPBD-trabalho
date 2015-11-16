@@ -61,12 +61,15 @@ CREATE TABLE IF NOT EXISTS Musicas (
   CONSTRAINT album_Musicas FOREIGN KEY (AlbumId) REFERENCES Albuns (Id) ON DELETE CASCADE ON UPDATE CASCADE
 );
 
-CREATE TABLE MusicasComArtistaEAlbum (
-	NomeMusica VARCHAR(100) NOT NULL,
-	NomeArtista VARCHAR(50) NOT NULL,
-	NomeAlbum INT(10) UNSIGNED NOT NULL,
-	DataLancamento DATE NOT NULL
-);
 
-DROP TABLE IF EXISTS MusicasComArtistaEAlbum;
-CREATE ALGORITHM=UNDEFINED DEFINER=root@localhost SQL SECURITY DEFINER VIEW MusicasComArtistaEAlbum AS select Musicas.Nome AS NomeMusica,Artistas.Nome AS NomeArtista,Albuns.Nome AS NomeAlbum,Albuns.AnoLancamento AS DataLancamento from (((Musicas join Albuns on((Musicas.AlbumId = Albuns.Id))) join AlbunsArtistas on((AlbunsArtistas.AlbumId = Albuns.Id))) join Artistas on((AlbunsArtistas.ArtistaId = Artistas.Id)));
+CREATE SQL SECURITY DEFINER VIEW MusicasComArtistaEAlbum AS
+  SELECT
+    Musicas.Nome AS NomeMusica,
+    Artistas.Nome AS NomeArtista,
+    Albuns.Nome AS NomeAlbum,
+    Albuns.AnoLancamento AS DataLancamento
+  FROM
+    Musicas
+    join Albuns on Musicas.AlbumId = Albuns.Id
+    join AlbunsArtistas on AlbunsArtistas.AlbumId = Albuns.Id
+    join Artistas on AlbunsArtistas.ArtistaId = Artistas.Id;
