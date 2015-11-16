@@ -8,15 +8,14 @@ INSERT INTO `Albuns` (`Id`, `Nome`, `AnoLancamento`) VALUES
 	(7, 'Lets Cheer To This', 2011),
 	(8, 'With Ears To See And Eyes To Hear', 2010);
 
-INSERT INTO `AlbunsArtistas` (`ArtistaId`, `AlbumId`, `Principal`) VALUES
-	(1, 1, 'true'),
-	(1, 3, 'true'),
-	(1, 4, 'true'),
-	(3, 5, 'true'),
-	(3, 6, 'true'),
-	(3, 7, 'true'),
-	(3, 8, 'true'),
-	(8, 2, 'true');
+INSERT INTO `Genero` (`Id`, `Nome`) VALUES
+	(9, 'Country Rock'),
+	(11, 'Eletronica'),
+	(4, 'Emocore'),
+	(1, 'Metalcore'),
+	(3, 'Pop Punk'),
+	(2, 'Post-Hardcore'),
+	(10, 'Rock');
 
 INSERT INTO `Artistas` (`Id`, `Nome`, `GeneroId`, `CountryId`) VALUES
 	(1, 'Asking Alexandria', 1, 1),
@@ -28,14 +27,15 @@ INSERT INTO `Artistas` (`Id`, `Nome`, `GeneroId`, `CountryId`) VALUES
 	(8, 'A Day To Remember', 1, 2),
 	(9, 'Fresno', 4, 3);
 
-INSERT INTO `Genero` (`Id`, `Nome`) VALUES
-	(9, 'Country Rock'),
-	(11, 'Eletronica'),
-	(4, 'Emocore'),
-	(1, 'Metalcore'),
-	(3, 'Pop Punk'),
-	(2, 'Post-Hardcore'),
-	(10, 'Rock');
+INSERT INTO `AlbunsArtistas` (`ArtistaId`, `AlbumId`, `Principal`) VALUES
+	(1, 1, 'true'),
+	(1, 3, 'true'),
+	(1, 4, 'true'),
+	(3, 5, 'true'),
+	(3, 6, 'true'),
+	(3, 7, 'true'),
+	(3, 8, 'true'),
+	(8, 2, 'true');
 
 INSERT INTO `Musicas` (`Id`, `Nome`, `GeneroId`, `ArtistaId`, `AlbumId`) VALUES
 	(1, 'Gold', 2, 3, 5),
